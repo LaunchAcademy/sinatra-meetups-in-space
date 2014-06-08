@@ -3,10 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World</title>
+    <title>Meetups</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
   </head>
   <body>
+    <p><%= flash[:notice] %></p>
+
+    <h1><a href="/">Meetups in Space</a></h1>
+
+    <ul>
+      <% if signed_in? %>
+        <li><a href="/sign_out">Sign out</a></li>
+      <% else %>
+        <li><a href="/auth/github">Sign in</a></li>
+      <% end %>
+    </ul>
+
     <%= yield %>
   </body>
 </html>
