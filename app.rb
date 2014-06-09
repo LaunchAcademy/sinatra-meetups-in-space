@@ -54,6 +54,12 @@ get '/example_protected_page' do
   authenticate!
 end
 
+get '/meetups' do
+  @meetups = Meetup.order(name: :asc)
+
+  erb :'meetups/index'
+end
+
 get '/meetups/:id' do
   @meetup = Meetup.find(params[:id])
 
