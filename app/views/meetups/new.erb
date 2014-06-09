@@ -1,0 +1,22 @@
+<h1>New Meetup</h1>
+
+<form class="form" action="/meetups" method="post">
+  <div class="form-input-wrapper">
+    <label for="meetup[name]">Name</label>
+    <input type="text" name="meetup[name]">
+  </div>
+
+  <div class="form-input-wrapper">
+    <label for="meetup[location]">Location</label>
+    <input type="text" name="meetup[location]">
+  </div>
+
+  <div class="form-input-wrapper">
+    <label for="meetup[description]">Description</label>
+    <textarea name="meetup[description]" rows="5" cols="80"></textarea>
+  </div>
+
+  <div class="form-input-wrapper">
+    <input type="submit" value="Save Meetup">
+  </div>
+</form>
